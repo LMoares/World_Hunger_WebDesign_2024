@@ -1,9 +1,10 @@
+/* Lorenzo's CSS start */
 .navbar
 {
 	padding: 10px;
 	position:fixed; 
 	width:100%;
-	z-index: 2; /* forces navbar to remain in foreground - prevents content overlapping */
+	z-index: 1; /* forces navbar to remain in foreground - prevents content overlapping */
 }
 
 .sr-only
@@ -21,3 +22,5 @@
 {
 	margin-top: 2em; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
 }
+
+/* Lorenzo's CSS end */
