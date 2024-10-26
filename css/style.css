@@ -1,7 +1,23 @@
-.navbar{
+.navbar
+{
 	padding: 10px;
+	position:fixed; 
+	width:100%;
+	z-index: 2; /* forces navbar to remain in foreground - prevents content overlapping */
 }
 
-.sr-only{
+.sr-only
+{
 	color: blue !important; /* temp to help determine page view */
+}
+
+.card-body
+{
+	display: flex; 
+	flex-direction: column; /* displays card content as a column, button has width of the card */
+}
+
+.pageHeader
+{
+	margin-top: 2em; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
 }
