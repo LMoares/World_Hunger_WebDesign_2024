@@ -1,10 +1,11 @@
 /* Lorenzo's CSS start */
+
 .navbar
 {
 	padding: 10px;
 	position:fixed; 
 	width:100%;
-	z-index: 1; /* forces navbar to remain in foreground - prevents content overlapping */
+	z-index: 99; /* forces navbar to remain in foreground - prevents content overlapping */
 }
 
 .sr-only
@@ -20,6 +21,220 @@
 
 .pageHeader
 {
-	margin-top: 2em; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
+	padding-top: 75px; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
+}
+
+#commentSection
+{
+	border-radius: 5px;
+	background-color: white;
+	padding: 5px;
+}
+
+.carousel-caption
+{
+	text-shadow: 2px 2px black;
 }
 /* Lorenzo's CSS end */
+
+/* Jean's CSS start */
+
+body{
+	background-color: #e1e1e1;
+}
+
+.navbar{
+	padding: 3px;
+	z-index: 99;
+	
+}
+
+.sr-only{
+	color: blue !important;
+}
+
+.nav-link-close:hover{
+	
+	color: red !important;
+}
+
+.nav-link:hover{
+	color: red !important;	
+}
+
+.navbar-toggler{
+	background-color: blue;
+	color: black;
+	margin: 10px;
+}
+
+
+
+.logo {
+	padding-left: 0.0em;
+	margin-right: -10px;
+	
+}
+
+
+#button-zero{
+	
+	background-color: blue;
+	margin-left: 10px;
+		
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+
+
+
+.navbar-light {
+	
+    background-color: #e1e1e1; !important;
+    /*border: none !important;*/
+    border-width:5px!important;
+	border-style: solid;
+}
+
+
+.index-img-one{
+	width: 100%;
+	padding-top: 105px;
+}
+
+#panel {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%);
+	color: black;
+	font-size: 2em;
+	font-weight: bold;
+	background-color: #DA28C8;
+	z-index: 1;
+	
+	
+}
+
+#kitchen-caption{
+	padding-bottom: 250px;
+}
+
+.food-bank-caption{
+	color: #7a0101;
+}
+#food-bank-button{
+	color: #d514e3;
+}
+#food-bank-button:hover{
+	color: blue;
+}
+.index-img-two{
+	width: 100%;
+	
+}
+.index-img-three{
+	width: 100%;
+}
+
+@media (max-width: 305px) {
+	.navbar{
+	padding: 0px;
+	margin-right: 0px;
+  }
+  
+	.pageHeader /*Lorenzo css*/
+	{
+		padding-top: 210px;
+	}
+	
+    .index-img-one {
+	width: 100%;
+	padding-top: 210px;
+  }
+	#carouselVideoExample{
+	margin-top: 195px;
+  }
+  
+    #carouselExample{
+	margin-top: 195px;	
+  }
+   
+}
+
+@media (min-width: 320px) {
+	.navbar{
+	padding: 0px;
+	margin-right: 0px;
+  }
+  
+  #carouselVideoExample{
+	margin-top: 108px;
+  }
+  
+  #carouselExample{
+	margin-top: 108px;	
+  }
+  
+    
+}
+
+@media (max-width: 1024px){
+	#kitchen-caption{
+	padding-bottom: 80px;
+	
+  }
+	
+}
+
+@media (max-width: 767px){
+	#kitchen-caption{
+		opacity: 0;
+	}
+	#kitchen-contact-under{
+		color: black;
+	}
+	#food-bank-under{
+		color: black;
+	}
+	#kitchen-button{
+		text-decoration: underline;
+		color: #d514e3;
+	}
+	#food-bank-button{
+		text-decoration: underline;
+		color: #d514e3;
+	}
+	#location-button{
+		text-decoration: underline;
+		color: #d514e3;
+	}
+	#kitchen-button:hover{
+		color: blue;
+	}
+	#food-bank-button:hover{
+		color: blue;
+    }
+	#location-button:hover{
+		color: blue;
+	}
+}
+
+@media (min-width: 767px) {
+	#kitchen-contact-under{
+		opacity: 0;	
+    }
+	#food-bank-under{
+		opacity: 0;
+	}
+	#location-under{
+		opacity: 0;
+	}
+}
+
+/* Jean's CSS end */
