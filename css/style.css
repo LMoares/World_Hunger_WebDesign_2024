@@ -75,9 +75,9 @@ body
 {
 	padding-top: 75px; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
 	padding-bottom: 10px;
-	background-color: #C9D6DF;
+	background-color: #52616B;
 	border-radius: 5px;
-	border: 5px solid #52616B;
+	border: 5px solid #1E2022;
 	/*adds shadow around each letter, adds a gradient that fades as it moves away from the letter*/
 	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white;
 }
