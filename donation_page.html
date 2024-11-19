@@ -28,13 +28,13 @@
 						<a class="nav-link" href="pagetwo.html">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pagethree.html">Contact</a>
+						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li>
 						<a class="nav-link" href="donation_page.html"><span class="sr-only">Donate</span></a>
 					</li>
 					<li>
-						<a class="nav-link" href="maps_page.html">Food Bank Locator</a>
+						<a class="nav-link" href="#">Page</a>
 					</li>
 					<li>
 						<a class="nav-link" href="#">Page</a>
@@ -52,7 +52,9 @@
 			<hr>
 			<div class="row">
 				<div class="col-sm-4">
-					<img class="d-block w-100" src="img/homepage_card_placeholder_donate.png" alt="Donation Banner"><br>
+					<div class="mb-4">
+						<img class="d-block w-100 rounded" src="img/donation_banner.png" alt="Donation Banner">
+					</div>
 				</div>
 				<div class="col-sm-8">
 					<div class="body_text">
@@ -74,7 +76,7 @@
 								<input type="text" class="form-control" id="donateName" placeholder="Name" required>
 								<label for="exampleFormControlInput1" class="form-label">Email address</label>
 								<input type="email" class="form-control" id="donateEmail" placeholder="name@example.com" required>
-								<label for="donatePledge" class="form-label">Pledged Amount</label>
+								<label for="donatePledge" class="form-label">Pledged Amount - Select Currency Type</label>
 								<input type="number" class="form-control" id="donatePledge" placeholder="" required></input>
 								<select onLoad="setCurrency(this.value)" onChange="setCurrency(this.value)" name="selection">
 									<option id="currency" value="€">€ EUR</option>
@@ -91,7 +93,7 @@
 						<form>
 							<div class="mb-3">
 								<label for="donateMessage" class="form-label">Personal Message</label>
-								<textarea class="form-control" id="donateComment" rows="7"></textarea>
+								<textarea class="form-control" id="donateComment" maxlength="250" rows="7"></textarea>
 							</div>
 							<div class="mb-3">
 								<input type="button" onClick="validate()" value="Submit" id="donateButton">
@@ -103,10 +105,12 @@
 			<hr>
 			<!-- Posted Donation Section -->
 			<div class="row">
-				<div class="col-sm-12 body_text">
-					<h3 class="text-center body_header">Recent Donations</h3>
-					<hr>
-					<div class="text-break" id="commentSection"></div>
+				<div class="col-sm-12">
+					<div class="body_text">
+						<h3 class="text-center body_header">Recent Donations</h3>
+						<hr>
+						<div class="text-break" id="commentSection"></div>
+					</div>
 				</div>
 			</div>
 			<hr>

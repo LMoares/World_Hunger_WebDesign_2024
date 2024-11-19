@@ -41,9 +41,11 @@ body
 	font-style: normal !important;
 	font-variation-settings: "wdth" 100 !important;
 	color: #1E2022;
-	background-color: #C9D6DF
+	background-color: #C9D6DF;
+	background-image: url("../img/bg-img.png");
+	background-attachment: fixed;
+	background-position: center;
 }
-
 
 .navbar
 {
@@ -51,6 +53,7 @@ body
 	position:fixed; 
 	width:100%;
 	z-index: 99; /* forces navbar to remain in foreground - prevents content overlapping */
+	background-color: #F0F5F9 !important;
 }
 
 .navbar_text
@@ -62,7 +65,7 @@ body
 {
 	display: flex; 
 	flex-direction: column; /* displays card content as a column*/
-	background-color: #F0F5F9;
+	background-color: #F0F5F9 !important;
 }
 
 .card:hover
@@ -117,6 +120,17 @@ body
 	border-radius: 5px;
 	padding: 5px;
 }
+
+.text_link
+{
+	color: blue;
+}
+
+.text_link:hover
+{
+	color: red;
+}
+
 /* Lorenzo's CSS end */
 
 /* Jean's CSS start */
