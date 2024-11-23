@@ -49,7 +49,6 @@
 					<h1 class="pageHeader">The Zero Hunger Project</h1>
 				</div>
 			</div>
-			<hr>
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="mb-4">
@@ -74,14 +73,14 @@
 							<form>
 								<label for="donateName" class="form-label">Personal Details</label>
 								<input type="text" class="form-control" id="donateName" placeholder="Name" required>
-								<label for="exampleFormControlInput1" class="form-label">Email address</label>
+								<label for="donateEmail" class="form-label">Email address</label>
 								<input type="email" class="form-control" id="donateEmail" placeholder="name@example.com" required>
 								<label for="donatePledge" class="form-label">Pledged Amount - Select Currency Type</label>
-								<input type="number" class="form-control" id="donatePledge" placeholder="" required></input>
+								<input type="number" class="form-control" id="donatePledge" placeholder="" required>
 								<select onLoad="setCurrency(this.value)" onChange="setCurrency(this.value)" name="selection">
-									<option id="currency" value="€">€ EUR</option>
-									<option id="currency" value="$">$ USD</option>
-									<option id="currency" value="£">£ GBP</option>
+									<option value="€">€ EUR</option>
+									<option value="$">$ USD</option>
+									<option value="£">£ GBP</option>
 								</select>
 								<input type="checkbox" id="newsletterOptIn" name="newsletter" value="Subscribe to Newsletter">
 								<label for="newsletterOptIn">Subscribe To Our Newsletter</label>
@@ -92,7 +91,7 @@
 					<div class="col-sm-8">
 						<form>
 							<div class="mb-3">
-								<label for="donateMessage" class="form-label">Personal Message</label>
+								<label for="donateComment" class="form-label">Personal Message</label>
 								<textarea class="form-control" id="donateComment" maxlength="250" rows="7"></textarea>
 							</div>
 							<div class="mb-3">
@@ -109,6 +108,7 @@
 					<div class="body_text">
 						<h3 class="text-center body_header">Recent Donations</h3>
 						<hr>
+						<!-- target destination for form inputs from js, page loads with premade messages with random pledge ammounts  -->
 						<div class="text-break" id="commentSection"></div>
 					</div>
 				</div>

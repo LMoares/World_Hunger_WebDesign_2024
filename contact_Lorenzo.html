@@ -11,7 +11,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/contactLorenzoScript.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
@@ -49,16 +49,45 @@
 					<h1 class="pageHeader">The Zero Hunger Project</h1>
 				</div>
 			</div>
-			<hr>
-			<div class="row body_text">
-				<div class="col-sm-3">
-					<img class="w-100" src="img/lorenzo_placeholder.png" alt="portrait of lorenzo moares nunez">
+			<div class="body_text">
+				<div class="row">
+					<div class="col-sm-3">
+						<img class="w-100 rounded border" src="img/tech-locator-sm.png" alt="portrait of lorenzo moares nunez">
+					</div>
+					<div class="col-sm-9">
+						<h3>Lorenzo Moares Nunez</h3>
+						<h5>Treasurer and Logistician</h5>
+						<p>At Zero Hunger my focus is to maintain our state of the art donation drive as well as ensure that each Food Bank we operate stays stocked with fresh foods from the generous communities responsible for making our organization possible.</p>
+					</div>
 				</div>
-				<div class="col-sm-9">
-					<h3>Lorenzo Moares Nunez</h3>
-					<h5>Treasurer and Administrator</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<hr>
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="text-center">Contact Information</h3>
+					</div>
 				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="mb-6 pl-2">
+							<form>
+								<label for="contactName" class="form-label">Personal Details</label>
+								<input type="text" class="form-control" id="contactName" placeholder="Name" required>
+								<label for="contactEmail" class="form-label">Email address</label>
+								<input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+								<input class="mt-2" type="button" onClick="validate()" value="Submit" id="contactButton">
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="mb-4">
+							<form>
+								<label for="donateMessage" class="form-label">Message</label>
+								<textarea class="form-control" id="contactComment" maxlength="250" rows="5"></textarea>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<hr>
 			<footer class="text-center">
 				<p>Copyright 2024©</p>

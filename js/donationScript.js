@@ -58,20 +58,32 @@ function donoSubmit()
 function validate()
 {	
 	let valid = false;
-	
+	let msg = "";
 	//ensures that all form fields are filled before allowing user to submit information
     if (document.getElementById("donateName").value !== "" && document.getElementById("donateEmail").value !== "" && document.getElementById("donatePledge").value !== "" && document.getElementById("donateComment").value !== "") 
 	{
         valid = true;
     }
     else {
-        alert("Please fill in all form fields before submitting Donation Pledge");
+        msg += "Fill in all form fields ";
     }
 	
+	//checks if email input contains an @ symbol
+	if(!document.getElementById("donateEmail").value.includes("@"))
+	{
+		if(valid)
+		{
+			msg += "Use a valid Email. ";			
+		}else
+		{
+			msg += "and use a valid Email. "
+		}
+		valid = false;
+	}
 	//checks if pledge field is a positive number
 	if (document.getElementById("donatePledge").value < 0)
 	{
-		alert("Please enter a valid number into the Pledged Amount section before submitting form. (Must be a positive number)");
+		msg += "Enter a valid number into the Pledged Amount section (Must be a positive number). ";
 		valid = false;
 	}
 	
@@ -79,6 +91,10 @@ function validate()
 	if(valid)
 	{
 		donoSubmit();
+	}else
+	{
+		//informs user of form errors
+		alert(msg + "Then submit Donation Pledge Form.");
 	}
 }
 
@@ -105,4 +121,5 @@ function premadeDonations()
 	}
 }
 
+//listens for HTML document information to be loaded, runs premadeDonations() function before page content
 document.addEventListener("DOMContentLoaded",premadeDonations,false);
