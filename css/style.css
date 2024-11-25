@@ -56,22 +56,23 @@ body
 	position:fixed; 
 	width:100%;
 	z-index: 99; /* forces navbar to remain in foreground - prevents content overlapping */
-	background-color: #F0F5F9 !important;
+	background-color: #C9D6DF !important;
 }
 
 .navbar_text
 {
 	padding-left: 5%;
+	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white !important;
 }	
 
-.card-body
+.card_body_index
 {
 	display: flex; 
 	flex-direction: column; /* displays card content as a column*/
 	background-color: #F0F5F9 !important;
 }
 
-.card:hover
+.card_index:hover
 {
 	transform: scale(1.03); /*increases text font size when user hovers over hyperlink text*/
 	border: 2px solid #52616B;
@@ -85,6 +86,7 @@ body
 	background-color: #52616B;
 	border-radius: 5px;
 	border: 5px solid #1E2022;
+	border-top-style: none;
 	/*adds shadow around each letter, adds a gradient that fades as it moves away from the letter*/
 	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white;
 }
@@ -145,12 +147,21 @@ body
 }
 
 /*sizes contact page images to center and restrict width to ensure padding between viewport edges on viewports of 430pixel width or less*/
-@media (max-width: 430px)
+@media (max-width: 575px)
 {
 	.contact_link
 	{
 		width: 80%;
+		height: 110%;
 		margin: 0 auto 0 auto;
+		object-fit: scale-down;
+	}
+	
+	.card
+	{
+		width: 80%;
+		margin: 0 auto 0 auto;
+		object-fit: cover;
 	}
 	
 }
