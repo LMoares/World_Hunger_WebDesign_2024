@@ -1,5 +1,7 @@
 /* Lorenzo's CSS start */
+
 /*color pallette(light to dark): #F0F5F9, #C9D6DF, #52616B, #1E2022 */
+
 /* FONTS
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 200 to 700
@@ -41,7 +43,10 @@ body
 	font-style: normal !important;
 	font-variation-settings: "wdth" 100 !important;
 	color: #1E2022;
-	background-color: #C9D6DF
+	background-color: #C9D6DF;
+	background-image: url("../img/bg-img.png");
+	background-attachment: fixed;
+	background-position: center;
 }
 
 .navbar
@@ -50,23 +55,25 @@ body
 	position:fixed; 
 	width:100%;
 	z-index: 99; /* forces navbar to remain in foreground - prevents content overlapping */
+	background-color: #C9D6DF !important;
 }
 
 .navbar_text
 {
 	padding-left: 5%;
+	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white !important;
 }	
 
-.card-body
+.card_body_index
 {
 	display: flex; 
 	flex-direction: column; /* displays card content as a column*/
-	background-color: #F0F5F9;
+	background-color: #F0F5F9 !important;
 }
 
-.card:hover
+.card_index:hover
 {
-	transform: scale(1.05); /*increases text font size when user hovers over hyperlink text*/
+	transform: scale(1.03); /*increases text font size when user hovers over hyperlink text*/
 	border: 2px solid #52616B;
 
 }
@@ -78,6 +85,7 @@ body
 	background-color: #52616B;
 	border-radius: 5px;
 	border: 5px solid #1E2022;
+	border-top-style: none;
 	/*adds shadow around each letter, adds a gradient that fades as it moves away from the letter*/
 	text-shadow: 2px 2px 2px white, -2px -2px 2px white, -2px 2px 2px white, 2px -2px 2px white;
 }
@@ -95,6 +103,15 @@ body
 {
 	border-radius: 5px;
 	background-color: #F0F5F9;
+	padding: 5px;
+	border: 2px solid #52616B;
+}
+
+.contact_link
+{
+	border-radius: 5px;
+	background-color: #C9D6DF;
+	margin: 5px;
 	padding: 5px;
 	border: 2px solid #52616B;
 }
@@ -117,199 +134,100 @@ body
 	border-radius: 5px;
 	padding: 5px;
 }
-/* Lorenzo's CSS end */
 
-/* Jean's CSS start */
-.navbar{
-	padding: 3px;
-	z-index: 99;
-	
+.text_link
+{
+	text-decoration: none;
+	color: black;
 }
 
-.sr-only{
+.text_link:hover
+{
+	color: blue;
+}
+
+.sr-only
+{
+	font-weight: bold !important; 
+	border: 3px solid grey !important;
+	border-style: inset !important;
+	padding: 2px;
+	color: #000000 !important;
+}
+
+.nav-link
+{
+	color: black !important;
+}
+
+.nav-link-close:hover
+{
+	
 	color: blue !important;
 }
 
-.nav-link-close:hover{
-	
-	color: red !important;
+.nav-link:hover
+{
+	color: blue !important;	
 }
 
-.nav-link:hover{
-	color: red !important;	
-}
-
-.navbar-toggler{
-	background-color: blue;
-	color: black;
+.navbar-toggler
+{
+	background-color: #F0F5F9;
+	color: #52616B;
 	margin: 10px;
 }
 
-
-
-.logo {
-	padding-left: 0.0em;
-	margin-right: -10px;
-	
-}
-
-
-#button-zero{
-	
-	background-color: #F0F5F9;;
-	margin-left: 10px;
-		
-}
-
-a{
-	text-decoration: none;
-	color: black;
-	
-}
-
-
-.navbar-light {
-	
+.navbar-light
+{
 	background-color: #F0F5F9; !important;
     /*border: none !important;*/
     border-width:5px!important;
 	border-style: solid;
 }
 
-
-.index-img-one{
-	width: 100%;
-	padding-top: 105px;
-}
-
-#panel {
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%);
-	color: black;
-	font-size: 2em;
-	font-weight: bold;
-	background-color: #DA28C8;
-	z-index: 1;
-	
-	
-}
-
-#kitchen-caption{
-	padding-bottom: 250px;
-}
-
-.food-bank-caption{
-	color: #7a0101;
-}
-#food-bank-button{
-	color: #d514e3;
-}
-#food-bank-button:hover{
-	color: blue;
-}
-.index-img-two{
-	width: 100%;
-	
-}
-.index-img-three{
-	width: 100%;
-}
-
 @media (max-width: 305px) {
-	.navbar{
-	padding: 0px;
-	margin-right: 0px;
-  }
-  
-	.pageHeader /*Lorenzo css*/
+	.pageHeader 
 	{
 		padding-top: 210px;
 	}
-	
-    .index-img-one {
-	width: 100%;
-	padding-top: 210px;
-  }
-	#carouselVideoExample{
-	margin-top: 195px;
-  }
-  
-    #carouselExample{
-	margin-top: 195px;	
-  }
    
 }
 
 @media (min-width: 320px) {
-	.navbar{
+	.navbar
+	{
 	padding: 0px;
 	margin-right: 0px;
-  }
-  
-  #carouselVideoExample{
-	margin-top: 108px;
-  }
-  
-  #carouselExample{
-	margin-top: 108px;	
-  }
-  
-    
+	}
+   
 }
 
-@media (max-width: 1024px){
-	#kitchen-caption{
-	padding-bottom: 80px;
+/*sizes contact page images to center and restrict width to ensure padding between viewport edges on viewports of 430pixel width or less*/
+@media (max-width: 575px)
+{
+	.contact_link
+	{
+		width: 80%;
+		height: 110%;
+		margin: 0 auto 0 auto;
+		object-fit: scale-down;
+	}
 	
-  }
-	
-}
-
-@media (max-width: 767px){
-	#kitchen-caption{
-		opacity: 0;
-	}
-	#kitchen-contact-under{
-		color: black;
-	}
-	#food-bank-under{
-		color: black;
-	}
-	#kitchen-button{
-		text-decoration: underline;
-		color: #d514e3;
-	}
-	#food-bank-button{
-		text-decoration: underline;
-		color: #d514e3;
-	}
-	#location-button{
-		text-decoration: underline;
-		color: #d514e3;
-	}
-	#kitchen-button:hover{
-		color: blue;
-	}
-	#food-bank-button:hover{
-		color: blue;
-    }
-	#location-button:hover{
-		color: blue;
+	.card
+	{
+		width: 80%;
+		margin: 0 auto 0 auto;
+		object-fit: cover;
 	}
 }
 
-@media (min-width: 767px) {
-	#kitchen-contact-under{
-		opacity: 0;	
-    }
-	#food-bank-under{
-		opacity: 0;
-	}
-	#location-under{
-		opacity: 0;
+@media (max-width: 767px)
+{
+	.carousel_toggle
+	{
+		display: none;
 	}
 }
 
-/* Jean's CSS end */
+/* Lorenzo's CSS end */
