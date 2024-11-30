@@ -232,3 +232,61 @@ body
 }
 
 /* Lorenzo's CSS end */
+
+
+
+
+
+/* Jaehyuk's CSS start */
+
+/* 
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 300 to 800 
+
+.parkinsans-<uniquifier> {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+
+.process_explain {
+	font-family: "Parkinsans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+.col-sm-6 > p {
+	text-align: center;
+}
+
+.happy_children {
+	width: 400px;
+	height: 400px;
+	border-radius: 20px;
+	border: 2px solid black;
+}
+
+.banned_food{
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
+
+.banned_food1 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.benefit_of_food_bank {
+	background-color: white;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+
+/* Jaehyuk's CSS end */
