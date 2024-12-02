@@ -282,11 +282,37 @@ body
 	flex-wrap: nowrap;
 }
 
-.benefit_of_food_bank {
+.random_food_class {
 	background-color: white;
+	width: 600px;
+	height: 100px;
+	margin: 0 auto;
 	border-radius: 5px;
 	border: 2px solid black;
 }
+
+form{
+	background-color: white;
+	width: 70%;
+	margin: 0 auto; /* center the form element */
+	padding: 20px 20px 40px 20px; /* top, left, bottom, right */
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+
+@media screen and (max-width: px){
+
+}
+ 
+@media screen and (max-width: px){
+
+}
+
+@media screen and (max-width: px){
+
+}
+
 
 
 /* Jaehyuk's CSS end */
