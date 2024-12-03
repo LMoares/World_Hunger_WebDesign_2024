@@ -3,7 +3,6 @@
 function validate(){
 	let valid = true;
 	let msge = "Incomplete form: ";
-	let success = "It has been successfully submitted.";
 	
 	if(document.getElementById("fname").value === ""){
 		msge += "You need to fill firstname. ";
