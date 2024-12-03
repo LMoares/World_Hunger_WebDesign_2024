@@ -1,5 +1,7 @@
 //Author: Jaehyuk Lim x23271329
 
+
+// validate if users input correctly
 function validate(){
 	let valid = true;
 	let msge = "Incomplete form: ";

@@ -252,6 +252,7 @@ body
 
 */
 
+/* font for p tag */
 .process_explain {
 	font-family: "Parkinsans", sans-serif;
 	font-optical-sizing: auto;
@@ -263,6 +264,7 @@ body
 	text-align: center;
 }
 
+/* image */
 .happy_children {
 	width: 400px;
 	height: 400px;
@@ -270,49 +272,33 @@ body
 	border: 2px solid black;
 }
 
+/* image */
 .banned_food{
 	width: 100px;
 	height: 100px;
-	margin: 10px;
-}
-
-.banned_food1 {
-	display: flex;
-	justify-content: center;
-	flex-wrap: nowrap;
-}
-
-.random_food_class {
-	background-color: white;
-	width: 600px;
-	height: 100px;
-	margin: 0 auto;
-	border-radius: 5px;
-	border: 2px solid black;
+	margin: 10px; /* margin for between pictures */
 }
 
 form{
 	background-color: white;
 	width: 70%;
 	margin: 0 auto; /* center the form element */
-	padding: 20px 20px 40px 20px; /* top, left, bottom, right */
+	padding: 20px 20px 20px 20px; /* for the content in the form / top, left, bottom, right */
 	border-radius: 5px;
 	border: 2px solid black;
 }
 
-
-@media screen and (max-width: px){
-
+@media screen and (max-width: 980px){
+    .col-sm-6 > p {
+		margin-top: 10px; /* space between picture and text */
+        font-size: 14px;
+    }
+    .col-sm-6 img {
+        width: 100%; /* for images to take over */
+    }
+	form {
+		width: 100%; /* for form to take over */
+	}
 }
- 
-@media screen and (max-width: px){
-
-}
-
-@media screen and (max-width: px){
-
-}
-
-
 
 /* Jaehyuk's CSS end */
