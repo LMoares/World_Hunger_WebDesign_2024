@@ -2,6 +2,8 @@
 
 //creating donation array for comment section, including premade messages
 let donation = ["Lorenzo","","Wow! Great job!","Jean","","Glad to help!","Jeahyuk","","Every little bit helps!"];
+
+//initializes default currency as euro
 let currency = "€";
 let currencyTag = "EUR";
 
@@ -9,7 +11,7 @@ function setCurrency(x)
 {
 	//default currency is EURO. currency changes depending on user selection
 	currency = x;
-	//sets Pledge input box's placeholder as chosen currency
+	//sets Pledge input field placeholder as chosen currency
 	document.getElementById("donatePledge").placeholder = currency;
 	if (currency == "$")
 	{
@@ -25,9 +27,13 @@ function setCurrency(x)
 
 function donoPrint(x,y,z)
 {
-	//prints donation page information into comment section
+	//prints donation page information into message section
 	let print = document.getElementById("commentSection");
-	let prepend = print.innerHTML; //allows for new comments to be added at the top of the comment section
+	
+	//saves previous print value to new variable
+	let prepend = print.innerHTML; 
+	
+	//prints specified index of array to message section and ensures previous messages will display afterward
 	print.innerHTML = "<b>Name:</b> " + donation[x] + "<br><b>Pledged Amount:</b> " + donation[y] + "<br><br><b>Comment:</b> " + donation[z] + "<hr>" + prepend;
 }
 
@@ -35,8 +41,11 @@ function donoSubmit()
 {
 	
 	let userName = document.getElementById("donateName").value;
-	//userPledge input is converted from a string to a numeric(float) value, toLocaleString takes the new value and returns a string that is a currency sensitive representation of that number. ie: float 10000.00 & currency is USD, is converted to $10,000.00, float 1234.567 & currency is EUR, is converted to €1234.57, etc.
+	
+	//userPledge input is converted from a string to a numeric(float) value, toLocaleString takes the new value and returns a string that is a currency sensitive representation of that number. 
+	//ie: float 10000.00 & currency is USD, is converted to $10,000.00, float 1234.567 & currency is EUR, is converted to €1234.57, etc.
 	let userPledge = parseFloat(document.getElementById("donatePledge").value).toLocaleString(undefined,{minimumFractionDigits: 2, style: "currency", currency: currencyTag});
+	
 	let userComment = document.getElementById("donateComment").value;
 	
 	//prepends donation array with values from donation page form. takes those elements and adds them to the start of the array, shifting all other elements.
@@ -45,40 +54,69 @@ function donoSubmit()
 	
 	if (document.getElementById("newsletterOptIn").checked)
 	{
+		//checks if newsletter checkbox is checked for user wanting to sign up to newsletter
 		document.getElementById("newsletterActive").innerHTML = "Your email: <b>" + document.getElementById("donateEmail").value + "</b><br> has been added to our Newsletter.<br>Thank You.";
 		document.getElementById("newsletterActive").style.backgroundColor = "#F0F5F9";
 	}else
 	{
+		//ensures that if another form is sent without checkbox being filled the newletter message will not display
 		document.getElementById("newsletterActive").innerHTML = "";
 		document.getElementById("newsletterActive").style.backgroundColor = "";
 	}
+	
+	//resets pledge field after form is used to fill message section
+	document.getElementById("donateName").value = "";
+	document.getElementById("donatePledge").value = "";
+	document.getElementById("donateEmail").value = "";
+	document.getElementById("donateComment").value = "";
+	document.getElementById("newsletterOptIn").checked = false;
 }
 
 
 function validate()
 {	
 	let valid = false;
-	
+	let msg = "";
 	//ensures that all form fields are filled before allowing user to submit information
     if (document.getElementById("donateName").value !== "" && document.getElementById("donateEmail").value !== "" && document.getElementById("donatePledge").value !== "" && document.getElementById("donateComment").value !== "") 
 	{
         valid = true;
     }
     else {
-        alert("Please fill in all form fields before submitting Donation Pledge");
+        msg += "Fill in all form fields ";
     }
+	
+	//checks if email input contains an @ symbol
+	if(!document.getElementById("donateEmail").value.includes("@"))
+	{
+		if(valid)
+		{
+			//if all form sections are filled the alert message will begin with the following
+			msg += "Use a valid Email. ";			
+		}else
+		{
+			//if not all form sections are not filled this message will concadenate to msg
+			msg += "and use a valid Email. "
+		}
+		valid = false;
+	}
 	
 	//checks if pledge field is a positive number
 	if (document.getElementById("donatePledge").value < 0)
 	{
-		alert("Please enter a valid number into the Pledged Amount section before submitting form. (Must be a positive number)");
+		msg += "Enter a valid number into the Pledged Amount section (Must be a positive number). ";
 		valid = false;
 	}
 	
 	
 	if(valid)
 	{
+		//calls for donoSubmit function to add form values to message section
 		donoSubmit();
+	}else
+	{
+		//informs user of form errors
+		alert(msg + "Then submit Donation Pledge Form.");
 	}
 }
 
@@ -105,4 +143,5 @@ function premadeDonations()
 	}
 }
 
+//listens for HTML document information to be loaded, runs premadeDonations() function before page content
 document.addEventListener("DOMContentLoaded",premadeDonations,false);

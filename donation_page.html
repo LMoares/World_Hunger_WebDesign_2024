@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Zero Hunger Page Two</title>
+		<title>Zero Hunger - Donation Drive</title>
 		<meta name="author" content="Lorenzo Moares Nunez x23378441">
-		<meta name="keywords" content="">
+		<meta name="keywords" content="Zero Hunger, World Hunger, Sustainability, Donation, Donation Drive, Pledge, Volunteer, Volunteer Near Me, Community Service, Community Service Near Me, Food Bank, Food Bank near me, Public Food Pantry, Food Drive, Food Drive Near Me, Community Food Drive, Dublin Food Bank, Dublin Communtiy Service">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -11,12 +11,12 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-		<script type="text/javascript" src="js/donationScript.js"></script>
+		<script src="js/donationScript.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
 			<a class="navbar-brand" href="index.html"><h3 class="navbar_text">Zero Hunger</h3></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
@@ -28,6 +28,7 @@
 						<a class="nav-link" href="pagetwo.html">About</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li>
@@ -49,17 +50,17 @@
 					<h1 class="pageHeader">The Zero Hunger Project</h1>
 				</div>
 			</div>
-			<hr>
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="mb-4">
-						<img class="d-block w-100 rounded" src="img/donation_banner.png" alt="Donation Banner">
+						<img class="d-block w-100 rounded" src="img/donation_banner.png" alt="Illustration of the Zero Hunger Donation Banner">
 					</div>
 				</div>
 				<div class="col-sm-8">
 					<div class="body_text">
 						<h2 class="text-center body_header">Donation Drive</h2><br>
-						<p>Here at Zero Hunger we ensure that every Euro sent is put towards a meal for a person in need. If you would like to help please fill out the form below.Each person that pledges can leave a message to be seen by all that visit this page. <br><br>With your pledge we will send you an information package with more details on exactly how your donation is used. It's people like you that allow us to continue to fund food drives in communities near and far. From the individuals here at Zero Hunger, we thank you for doing your part.</p>
+						<p>Here at Zero Hunger we ensure that every Euro sent is put towards a meal for a person in need. If you would like to help please fill out the form below. Each person that pledges can leave a message to be seen by all that visit this page.</p> 
+						<p>With your pledge we will send you an information package with more details on exactly how your donation is used. It's people like you that allow us to continue to fund food drives in communities near and far. From the individuals here at Zero Hunger, we thank you for doing your part.</p>
 					</div>
 				</div>
 			</div>
@@ -74,14 +75,14 @@
 							<form>
 								<label for="donateName" class="form-label">Personal Details</label>
 								<input type="text" class="form-control" id="donateName" placeholder="Name" required>
-								<label for="exampleFormControlInput1" class="form-label">Email address</label>
-								<input type="email" class="form-control" id="donateEmail" placeholder="name@example.com" required>
+								<label for="donateEmail" class="form-label">Email address</label>
+								<input type="email" class="form-control" id="donateEmail" placeholder="email@website.com" required>
 								<label for="donatePledge" class="form-label">Pledged Amount - Select Currency Type</label>
-								<input type="number" class="form-control" id="donatePledge" placeholder="" required></input>
+								<input type="number" class="form-control" id="donatePledge" placeholder="" required>
 								<select onLoad="setCurrency(this.value)" onChange="setCurrency(this.value)" name="selection">
-									<option id="currency" value="€">€ EUR</option>
-									<option id="currency" value="$">$ USD</option>
-									<option id="currency" value="£">£ GBP</option>
+									<option value="€">€ EUR</option>
+									<option value="$">$ USD</option>
+									<option value="£">£ GBP</option>
 								</select>
 								<input type="checkbox" id="newsletterOptIn" name="newsletter" value="Subscribe to Newsletter">
 								<label for="newsletterOptIn">Subscribe To Our Newsletter</label>
@@ -92,7 +93,7 @@
 					<div class="col-sm-8">
 						<form>
 							<div class="mb-3">
-								<label for="donateMessage" class="form-label">Personal Message</label>
+								<label for="donateComment" class="form-label">Personal Message</label>
 								<textarea class="form-control" id="donateComment" maxlength="250" rows="7"></textarea>
 							</div>
 							<div class="mb-3">
@@ -104,11 +105,13 @@
 			</div>
 			<hr>
 			<!-- Posted Donation Section -->
+			<!-- Posted Donation Section -->
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="body_text">
 						<h3 class="text-center body_header">Recent Donations</h3>
 						<hr>
+						<!-- target destination for form inputs from js, page loads with premade messages with random pledge ammounts  -->
 						<div class="text-break" id="commentSection"></div>
 					</div>
 				</div>
