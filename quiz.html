@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Zero Hunger - Quiz & QA</title>
+		
+		<!-- boots strap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- meta tag -->
+		<meta name="author" content="Jaehyuk Lim">
+		<meta name="keywords" content="volunteering, foodbank, food donation, serving, poor, starving">
+		
+		<!-- my own css -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- my own js -->
+		<script type = "text/javascript" src = "js/quiz.js"> </script>
+		<script type = "text/javascript" src = "js/QA.js"> </script>
+		
+		<!--global fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
+			<a class="navbar-brand" href="index.html"><h3 class="navbar_text">Zero Hunger</h3></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="kitchen.html">Kitchen</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+					<li>
+						<a class="nav-link" href="process.html">Food bank</a>
+					</li>
+					<li>
+						<a class="nav-link" href="quiz.html"><span class="sr-only">Quiz & QA</span></a>
+					</li>
+					<li>
+						<a class="nav-link" href="donation_page.html">Donate</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class="container-fluid pt-5 pb-5"> <!-- space for div -->
+		
+			<!-- first section -->
+			<div class="container-fluid pt-5"> <!-- space for div -->
+				<h1 class="text-center"> Quiz </h1> <!-- text in the middle -->
+				
+				<form class="process_form" onsubmit="return validate()"> <!-- validate the input -->
+					<label>First name</label>
+					<input id="fname" type="text">
+					<br>
+					<label>Surname</label>
+					<input id="surname" type="text">
+					<br>
+					<label>E-mail</label>
+					<input id="Email" type="text">
+					
+					<br> <br>
+					
+					<h6>1. How many people are we helping with this project?</h6>
+					<input type="radio" name="number_of_people" value="10000" id="10000p">
+					<label for="10000p">10,000</label> &nbsp;
+					<input type="radio" name="number_of_people" value="20000" id="20000p">
+					<label for="20000p">20,000</label> &nbsp;
+					<input type="radio" name="number_of_people" value="30000" id="30000p">
+					<label for="30000p">30,000+</label>
+					
+					<br>
+					
+					<h6>2. How much food is donated to this project daily?</h6>
+					<input type="radio" name="amount_of_donated_food" value="1000" id="1000kg">
+					<label for="1000kg">10,000</label> &nbsp;
+					<input type="radio" name="amount_of_donated_food" value="2000" id="2000kg">
+					<label for="2000kg">20,000</label> &nbsp;
+					<input type="radio" name="amount_of_donated_food" value="3000" id="3000kg">
+					<label for="3000kg">30,000+</label>
+					
+					<h6>3. How many volunteers are participating throughout the country?</h6>
+					<input type="radio" name="number_of_volunteers" value="5000" id="5000v">
+					<label for="5000v">5,000</label> &nbsp;
+					<input type="radio" name="number_of_volunteers" value="10000" id="10000v">
+					<label for="10000v">10,000</label> &nbsp;
+					<input type="radio" name="number_of_volunteers" value="15000" id="15000v">
+					<label for="15000v">15,000+</label>
+					
+					<br>
+					
+					<input type="submit" value="submit"> &nbsp; &nbsp;
+					<input type="reset" value="reset">
+					
+					<p id="details"></p> <!-- validation result -->
+				</form>
+			</div>
+			
+			<hr>
+			
+			<!-- second section -->
+			<div class="container-fluid">
+				<h1 class="text-center">Q&A</h1> <!-- text in the middle -->
+				<form class="QA process_form" onsubmit="return question_result()"> <!-- validate the input -->
+					<h4>Feel free to ask us! </h4>
+					<label>user name</label>
+					<input id="uname" type="text">
+					
+					<br> <br>
+					
+					<label for="freeform">Question:</label> <br>
+					<textarea name="freeform" rows="4" cols="50" id="freeform"> </textarea>
+					
+					<br>
+					<input type="submit" value="submit"> &nbsp; &nbsp;
+					<input type="reset" value="reset">
+					
+					<br>
+					
+					<p id="question"></p> <!-- validation result -->
+				</form>
+			</div>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</body>
+</html>

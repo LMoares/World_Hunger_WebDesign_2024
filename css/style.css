@@ -25,7 +25,7 @@
 }
 
 */
-
+/*sets global fonts & background img*/
 h1,h2,h3,h4,h5,h6,label
 {
 	font-family: "Oswald", serif !important;
@@ -58,7 +58,11 @@ body
 	background-color: #C9D6DF !important;
 }
 
-.navbar_text
+.navbar-brand
+{
+	padding-left: 0.25rem;
+}
+
 .navbar_text
 {
 	padding-left: 5%;
@@ -81,8 +85,8 @@ body
 
 .pageHeader
 {
-	padding-top: 75px; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
-	padding-bottom: 10px;
+	padding-top: 5rem; /* adds space to top of page, prevents element from being hidden by reflexive navbar across viewports. open to alternatives */
+	padding-bottom: 1rem;
 	background-color: #52616B;
 	border-radius: 5px;
 	border: 5px solid #1E2022;
@@ -229,6 +233,116 @@ body
 	{
 		display: none;
 	}
+	
+	/* Jean's CSS */
+	.carousel_box{
+		display: none !important;
+	}
+	/* Jean's CSS */
+	#topper { /*heading in mobile view or below 767px*/
+		
+		padding: 100px 20px 20px 20px; /*padding around headings to better position text on smaller screens*/
+	}
 }
 
 /* Lorenzo's CSS end */
+
+/* Jean's CSS starts */
+@media (min-width: 767px) { /*768px until larger*/
+	#topper {
+		display: none !important;
+	}
+	.carousel_box {					/*Kitchen-home-page spacing under fixed header from 767px*/
+		padding-top: 60px;
+	}
+	#carousel_kitchen_caption h5 {
+		font-size: 2rem;
+	}
+	#carousel_kitchen_caption p {
+		font-size: 1.2rem;
+	}
+	
+}
+/*Kitchen.html page*/
+.carousel_box {
+	padding-top: 60px;
+}
+
+.carousel_kitchen_caption {
+	/*clamp(min value property can take, prefered viewport size vh or vw, largest value property will take)*/
+	font-size: clamp(2rem, 3vh, 8rem); /*(min font size, viewport height 5% of the viewport, max font size)*/
+	font-weight: bold;
+	color: black;
+	/*center the caption*/
+	position: absolute; /* position freely inside the parent element */
+	top: 50%; /*positon middle of top and bottom of container*/
+	left: 50%; /*position middle of left and right of the container */
+	transform: translate(-50%, -50%); /* in conjuction with the the top 2 this ensure for perfect center*/
+	text-align: center; /* is used to center the text with in the container that above was centered */
+}
+
+/*targeting a bootstrap form on kitchen_signup.html */
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #52616B !important;/*changing background colour*/
+}
+
+/*form being implemented in kitchen signup page*/
+
+/*form bootstrap*/
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+
+/* Jean's CSS end */
+
+/* Jaehyuk's CSS start */
+
+.p_body {
+	text-align: center;
+}
+
+/* image */
+.happy_children {
+	width: 400px;
+	height: 400px;
+	border-radius: 20px;
+	border: 2px solid black;
+}
+
+/* image */
+.banned_food{
+	width: 100px;
+	height: 100px;
+	margin: 10px; /* margin for between pictures */
+}
+
+.process_form{
+	background-color: white;
+	width: 70%;
+	margin: 0 auto; /* center the form element */
+	padding: 20px 20px 20px 20px; /* for the content in the form / top, left, bottom, right */
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+@media screen and (max-width: 980px){
+    .p_body {
+		margin-top: 10px; /* space between picture and text */
+        font-size: 14px;
+    }
+    .img_body {
+        width: 100%; /* for images to take over */
+    }
+	.process_form {
+		width: 100%; /* for form to take over */
+	}
+}
+
+/* Jaehyuk's CSS end */
