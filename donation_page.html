@@ -54,7 +54,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="mb-4">
-						<img class="d-block w-100 rounded" src="img/donation_banner.png" alt="Illustration of the Zero Hunger Donation Banner">
+						<img class="d-block w-100 rounded lazyload" src="img/donation_banner.webp" alt="Illustration of the Zero Hunger Donation Banner">
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -80,7 +80,8 @@
 								<input type="email" class="form-control" id="donateEmail" placeholder="email@website.com" required>
 								<label for="donatePledge" class="form-label">Pledged Amount - Select Currency Type</label>
 								<input type="number" class="form-control" id="donatePledge" placeholder="" required>
-								<select onLoad="setCurrency(this.value)" onChange="setCurrency(this.value)" name="selection">
+								<label for="currency"></label>
+								<select id="currency" onLoad="setCurrency(this.value)" onChange="setCurrency(this.value)" name="selection">
 									<option value="€">€ EUR</option>
 									<option value="$">$ USD</option>
 									<option value="£">£ GBP</option>

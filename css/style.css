@@ -29,7 +29,6 @@
 h1,h2,h3,h4,h5,h6,label
 {
 	font-family: "Oswald", serif !important;
-	font-optical-sizing: auto !important;
 	font-weight: 600 !important;
 	font-style: normal !important;
 	color: #1E2022;
@@ -38,7 +37,6 @@ h1,h2,h3,h4,h5,h6,label
 body
 {
 	font-family: "Open Sans", serif !important;
-	font-optical-sizing: auto !important;
 	font-weight: 400 !important;
 	font-style: normal !important;
 	font-variation-settings: "wdth" 100 !important;
@@ -185,9 +183,9 @@ body
 
 .navbar-light
 {
-	background-color: #F0F5F9; !important;
+	background-color: #F0F5F9 !important;
     /*border: none !important;*/
-    border-width:5px!important;
+    border-width: 5px !important;
 	border-style: solid;
 }
 
@@ -279,6 +277,12 @@ body
 	left: 50%; /*position middle of left and right of the container */
 	transform: translate(-50%, -50%); /* in conjuction with the the top 2 this ensure for perfect center*/
 	text-align: center; /* is used to center the text with in the container that above was centered */
+}
+
+/*kitchen_signup page*/
+#gender_heading{
+	font-size: 1rem;
+	font-weight: bold;
 }
 
 /*targeting a bootstrap form on kitchen_signup.html */
